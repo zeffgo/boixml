@@ -7,10 +7,12 @@
    License: GPL2
    */
 
-	register_activation_hook( __FILE__, function() {
+	register_activation_hook( __FILE__, 'act');
+	
+	function act() {
 	  add_option('Activated_Plugin','Plugin-Slug');
 	  /* activation code here */
-	});
+	}
 
 
 	function getxml( $atts ){
